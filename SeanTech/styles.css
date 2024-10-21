@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.logo h1 {
+    display: inline;
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.catalogo {
+    padding: 20px;
+}
+
+.catalogo h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.livros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.livro {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.livro:hover {
+    transform: scale(1.05);
+}
+
+.livro img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none; /* Ocultar por padrão */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #007bff;
+    color: white;
+}
+
+.avaliacao {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.estrela {
+    font-size: 24px; /* Tamanho da estrela */
+    color: #ccc; /* Cor padrão */
+    cursor: pointer;
+}
+
+.estrela:hover,
+.estrela:hover ~ .estrela {
+    color: gold; /* Cor ao passar o mouse */
+}
+
+.estrela.selecionada {
+    color: gold; /* Cor da estrela selecionada */
+}
+
+.btn-reservar {
+    background-color: #000000; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Para que o padding funcione corretamente */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+.btn-reservar:hover {
+    background-color: #000000; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho */
+}
+
+.btn-reservar:active {
+    transform: scale(0.95); /* Reduz o tamanho ao clicar */
+}
